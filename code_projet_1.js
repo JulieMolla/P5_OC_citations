@@ -1,25 +1,24 @@
-const sujets = require('./donnees/sujets.json');
+const donnees = require('./donnees/donnees_projet_1.json');
 
-const verbes = require('./donnees/verbes.json');
-
-const complements = require('./donnees/complements.json');
-
-
-function generateRandomNumber(max) {
-    return Math.floor(Math.random() * max);
-};
 
 function getRandomElement(array) {
-    return array[generateRandomNumber(array.length)];
+    return array[Math.floor(Math.random() * array.length)];
 };
 
-function generateSentence() {
-    let sujet = getRandomElement(sujets)
-    let verbe = getRandomElement(verbes)
-    let complement = getRandomElement(complements)
-    return sujet + " " + verbe + " " + complement
+
+
+
+class Citation {
+    constructor(donnees) {
+        this.intro = getRandomElement(donnees.selection1);
+        this.cause = getRandomElement(donnees.selection2);
+        this.raison = getRandomElement(donnees.selection3);
+        this.solution = getRandomElement(donnees.selection4);
+    }
+    toString() {
+        return this.intro + " " + this.cause + " " + this.raison + " " + this.solution;
+
+    }
 }
 
-console.log(generateSentence());
-
-
+console.log(new Citation(donnees).toString());
