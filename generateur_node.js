@@ -1,32 +1,13 @@
-const donnees1 = require('./donnees/donnees_projet_1.json');
-const donnees2 = require('./donnees/donnees_projet_2.json');
+const donnees1 = require('./code_projet_1/donnees/donnees_projet_1.json');
+const donnees2 = require('./code_projet_1/donnees/donnees_projet_2.json');
 
-
-function getRandomElement(array) {
-    return array[Math.floor(Math.random() * array.length)];
-};
-
-class Citation {
-    constructor(donnees) {
-        this.intro = getRandomElement(donnees.selection1);
-        this.cause = getRandomElement(donnees.selection2);
-        this.raison = getRandomElement(donnees.selection3);
-        this.solution = getRandomElement(donnees.selection4);
-    }
-    toString() {
-        return this.intro + " " + this.cause + " " + this.raison + " " + this.solution;
-
-    }
-}
+const Citation = require('./code_projet_1/citation.js')
 
 function repeatSentence(n, donnees) {
     for (let i = 0; i < n; i++) {
         console.log(new Citation(donnees));
     }
 }
-
-
-
 
 const readline = require("readline");
 const rl = readline.createInterface({

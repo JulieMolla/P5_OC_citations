@@ -22,13 +22,17 @@
                 <p class="lead">
                     Vous souhaitez impressionner vos amis ou vous entrainer au prochain concours d'éloquence ? <br>
                     Vous souhaitez parler comme un homme politique ou un avocat ? <br>
+                    N'hésitez plus et faites fonctionner le générateur de citations ! Des fragments de phrases sont
+                    générés aléatoirement pour former un paragraphe digne des plus beaux discours de la Vème République
+                    ou des plus belles plaidoiries des Ténors du barreau !
                 </p>
                 <p>
-                    Choississez un nombre entre 1 et 10, puis cliquez sur "Politique" ou "Droit" en fonction de vos
-                    aspirations. <br>
-                    A vos clics !
+                    Choississez le nombre de citations à générer (entre 1 et 5), puis cliquez sur "Politique" ou
+                    "Droit" en fonction de vos
+                    aspirations.<br>
                 </p>
                 <div class="form-group w-25 mx-auto">
+                    <label for="number">Nombre de citations: </label>
                     <input class="number form-control" type="number" name="number" id="number" value="1" min="1"
                         max="10">
                 </div>
@@ -45,7 +49,7 @@
 
         <section class="citation">
             <div class="container">
-                <h5 id="titre" class="text-center mb-4">Vos citations seront générées ici.</h5>
+                <h5 id="titre" class="text-center mb-4">Vos citations seront générées aléatoirement ici.</h5>
                 <div id="citation"></div>
             </div>
         </section>
@@ -55,8 +59,6 @@
         <p>&copy; 2020 Copyright
             <a href="http://cv.juliemolla.fr/"> Julie Molla</a>
     </footer>
-
-    <script type="module" src="citation.js"></script>
 
     <script type="module" src="main.js"></script>
 
