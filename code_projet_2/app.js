@@ -28,7 +28,7 @@ export class App {
         const numberInput = document.getElementById("number");
         const number = parseInt(numberInput.value, 10);
 
-        if (number == NaN || number <= 0 || number > 5) {
+        if (number == NaN || number <= 0 || number > 5 || !Number.isInteger(number)) {
             errorElement.innerText = 'Veuillez saisir un nombre entier compris entre 1 et 5 inclus.';
             return;
         }
